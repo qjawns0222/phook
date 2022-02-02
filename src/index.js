@@ -1,14 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Ca from "./component/Ca";
+const person = [
+  { name: "mark", age: 45 },
+  { name: "mark1", age: 45 },
+  { name: "mark2", age: 45 },
+];
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Ca.Provider value={person}>
+      <App />
+    </Ca.Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
